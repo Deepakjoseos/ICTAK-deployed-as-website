@@ -20,9 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
   res.send("This is an ICTAK website server")
-})
+})*/
 
 app.use("/api/admin", userAccountsRouter);
 app.use("/api/partnership", partnerRouter);
