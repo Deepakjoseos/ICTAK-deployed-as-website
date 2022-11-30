@@ -45,15 +45,14 @@ app.use((err, req, res, next) => {
     })
   })
   
-// app.get("/api/cource", (req, res) => {
-//   res.json(cource);
-// });
-// app.get("/api/cource/:id", (req, res) => {
-//   const cource = cource.find((n) => n._id === req.params.id);
-//   res.json(cource);
-// });
+ app.get("/api/cource", (req, res) => {
+   res.json(cource);
+ });
+ app.get("/api/cource/:id", (req, res) => {
+   const cource = cource.find((n) => n._id === req.params.id);
+   res.json(cource);
+ });
  
-// 
  
 mongoose.connect(process.env.DBConnectionString, {
     useNewUrlParser: true,
